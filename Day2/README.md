@@ -67,3 +67,55 @@ This code creates a new file `package-lock.json` which will contain this code :
 -   Should you add `node_modules` to the git repository?\
     No, because `package-lock.json` can be used to make the `node_modules`\
     It contain all the details of the packages which can be installed.
+
+-   `node_modules` is stored in the server when application is deployed into production.
+
+-   Fetching data from our own server is faster than fetching data from another's CDN.
+
+-   `npx` means to execute using `npm`
+
+-   `Parcel` creates a local server to run our application.
+
+-   `type = "module"` in the `<script>` tag specifies that the file in a **module** and not a normal script file.
+
+-   `Hot Module Replacement (HMR)`\
+    It is a technique done by Parcel to update the modules in the web application without refreshing the page.
+
+-   `File Watcher Algorithm`\
+    It is written in C++\
+    It is used by Parcel which monitors any changes in the files.
+
+-   `.parcel-cache`\
+     This folder contains binary files which is used by Parcel to perform its functions.
+
+-   `dist`\
+     This folder contains a minified version of our application.
+
+-   `npx parcel index.html`\
+    This creates a **faster development build** and hosts it on a **server**.\
+    To make a Production build, use this command:\
+    `npx parcel build index.html`
+
+-   When using Parcel, we dont need entry point of our application in `package-lock.json` because we will specify the entry point of our Application when initialising Parcel.
+
+-   **Parcel Funtionality :-**
+
+    -   Bundling
+    -   Minify
+    -   Cleaning our Code
+    -   Creating a Server
+    -   Development and Production Build
+    -   Super Fast build algorithm
+    -   Image Optimization
+    -   Caching while Development
+    -   File Compression
+    -   Compatiblity with older browser versions
+    -   Enable HTTPS on dev machine
+    -   Port number management
+    -   Zero Config
+    -   `Consistent Hashing Algorithm`
+    -   `Hot Module Replacement`
+    -   `File Watcher Algorithm`
+
+-   **Dependency Tree** is a tree of dependencies which shows how the dependencies are dependent on each other.\
+    **Transitive Dependencies** is the chain of the dependency that depend on each other.
