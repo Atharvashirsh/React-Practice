@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is a practice app",
   "scripts": {
-    "test": "jest"
+    "start": "parcel index.html",
+    "test": "jest",
+    "parcel": "parcel"
   },
   "author": "",
   "license": "ISC",
