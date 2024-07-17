@@ -51,7 +51,7 @@
     -   `npx` can even execute packages without even installing it locally and cluttering your `package.json` file.
 
     ```bash
-    npx cowsay moo
+    >>> npx cowsay moo
     Need to install the following packages:
     cowsay@1.6.0
     Ok to proceed? (y)
@@ -68,7 +68,7 @@
     -   `npx` can execute Github gists or repositories.
 
     ```bash
-    npx https://gist.github.com/Atharvashirsh/b0392e90bc1cc89c13f4becbfcf4d2dd
+    >>> npx https://gist.github.com/Atharvashirsh/b0392e90bc1cc89c13f4becbfcf4d2dd
 
     Hello, World
     ```
