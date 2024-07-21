@@ -74,3 +74,53 @@
     ```
 
     -   [freeCodeCamp - npm vs npx](https://www.freecodecamp.org/news/npm-vs-npx-whats-the-difference/) : This doc contains more info about what `npx` can do.
+
+-   **Parcel** doesn't remove the `console.log()` statements when building the project but we can configure it to remove the console.log() statements by using : `babel-plugin-transform-remove-console`, which is a Babel plugin that removes the `console.log()` statements from build versions.
+
+-   Even after installing this plugin for **Babel**, Parcel still wont remove the `console.log()` statements because we need to configure Babel to use the `babel-plugin-transform-remove-console` plugin.\
+    `.babelrc` is the configuration file for **Babel** :
+
+    ```json
+    {
+        "plugins": [["transform-remove-console", { "exclude": ["error", "warn"] }]]
+    }
+    ```
+
+    -   This suggests that Babel should use the `"transform-remove-console"` plugin and should exclude `console.error()` and `console.warn()` statements.
+
+-   **Reconciliation**\
+    If you have multiple children in a component, then you need to provide each children with a key property.
+    [React Reconciliation](https://legacy.reactjs.org/docs/reconciliation.html)
+
+    ```js
+    const heading1 = React.createElement("h1", { key: "h1" }, "Heading 1");
+    const heading2 = React.createElement("h2", { key: "h2" }, "Heading 2");
+    ```
+
+-   To create a simple header using the basic `React.createElement()` it will be a big hassle.
+
+    ```js
+    const container = React.createElement(
+        "div",
+        {
+            id: "container",
+        },
+        [
+            React.createElement("h1", {}, "React App"),
+            React.createElement("ul", {}, [React.createElement("li", {}, "Home"), React.createElement("li", {}, "About Us"), React.createElement("li", {}, "Contact")]),
+        ]
+    );
+    ```
+
+    In order to reduce the complexity of this, we can use `JSX`
+
+-   **JSX**\
+    The idea of React was to use Javascript to create the HTML elements.\
+    But the `createElement` API from React was too lengthy and complex to write.\
+    Thus, JSX was introduced.
+
+    ```jsx
+    const heading = <h1> Hello World</h1>;
+    ```
+
+    `JSX` is not HTML code inside JS. JSX is like HTML like syntax.
